@@ -1,4 +1,5 @@
-package creational.abstractFactory;
+package creational;
+
 // https://www.tutorialspoint.com/design_pattern/abstract_factory_pattern.htm
 interface Chair {
     void sitOn();
@@ -15,7 +16,7 @@ class VictorianChair implements Chair {
     }
 }
 
-class VictorianTable implements Table{
+class VictorianTable implements Table {
     @Override
     public void placeStuff(){
         System.out.println("placing stuff on a Victorian table.");

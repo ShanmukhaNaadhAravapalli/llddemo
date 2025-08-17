@@ -1,4 +1,4 @@
-package creational.factory;
+package creational;
 // https://www.digitalocean.com/community/tutorials/java-design-patterns-example-tutorial
 interface DatabaseConnection {
     void connect();
@@ -28,7 +28,7 @@ class DatabaseConnectionFactory {
     }
 }
 
-public class main {
+public class factory {
     public static void main(String[] args) {
         DatabaseConnection dbConnection = DatabaseConnectionFactory.createConnection("MySQL");
         dbConnection.connect();

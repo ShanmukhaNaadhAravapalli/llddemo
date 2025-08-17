@@ -1,4 +1,4 @@
-package creational.ProtoType;
+package creational;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -33,7 +33,7 @@ class Employees implements Cloneable {
         return new Employees(temp);
     }
 }
-public class ProtoTypeExample {
+public class protoType {
     public static void main(String[] args) {
         try {
             Employees original = new Employees();

@@ -1,5 +1,7 @@
-package creational.Builder;
+package creational;
+
 // https://medium.com/@vinodkumarbheel61/builder-design-pattern-in-java-a-practical-guide-8a9aaf3d51a3
+
 class Post {
 
     private final String title;
@@ -27,7 +29,7 @@ class Post {
     }
 
     public String toString(){
-        return title + text + category;
+        return getTitle() + getText() + getCategory();
     }
 
     public static class Builder {

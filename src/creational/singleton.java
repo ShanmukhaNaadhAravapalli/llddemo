@@ -1,13 +1,15 @@
-package creational.singleton;
+package creational;
+
+
 // refer https://www.digitalocean.com/community/tutorials/java-singleton-design-pattern-best-practices-examples
-public class Singleton  {
-    private Singleton() {}
-   // Bill Pugh Singleton Implementation
+public class singleton  {
+    private singleton() {}
+    // Bill Pugh Singleton Implementation
     private static class SingletonHolder {
-        public static final Singleton instance = new Singleton();
+        public static final singleton instance = new singleton();
     }
 
-    public static Singleton getInstance() {
+    public static singleton getInstance() {
         return SingletonHolder.instance;
     }
 }
