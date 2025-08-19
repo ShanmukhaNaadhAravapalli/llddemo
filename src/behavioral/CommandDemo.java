@@ -1,4 +1,4 @@
-package behavioural; // Changed "behavoourial" to "behavioural" - common typo
+package behavioral; // Changed "behavoourial" to "behavioural" - common typo
 
 import java.util.ArrayList; // Import for ArrayList
 import java.util.List;    // Import for List
@@ -153,6 +153,7 @@ public class CommandDemo {
         }
     }
 }
+
 /*
 previously we could have
 Benefits of Encapsulating a Request as an Object:

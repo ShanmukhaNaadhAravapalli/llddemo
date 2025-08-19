@@ -1,4 +1,4 @@
-package behavoourial;
+package behavioral;
 abstract class Approver {
     protected Approver nextApprover;
 

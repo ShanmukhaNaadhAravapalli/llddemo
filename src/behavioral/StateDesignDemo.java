@@ -1,4 +1,4 @@
-package behavoourial;
+package behavioral;
 
 // State interface
 interface PhoneState {
