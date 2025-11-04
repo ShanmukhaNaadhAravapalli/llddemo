@@ -3,7 +3,9 @@ Type: Structural Pattern (like Adapter, but different intent).\
 Goal: Decouple abstraction from its implementation so they can evolve independently.\
 When to use:
 * You have two hierarchies (abstraction & implementation) that may grow independently.\
-* Example: Shape hierarchy (Circle, Square, …) and DrawingAPI hierarchy (OpenGL, DirectX, SVG, …).
+* Example: Shape hierarchy  abstraction (Circle, Square, …) and implementation33 DrawingAPI hierarchy (OpenGL, DirectX, SVG, …).
+![img_1.png](img_1.png)
+* ![img_2.png](img_2.png)
 ## 🔹 Decorator Design Pattern
 Decorator is a structural design pattern that lets you attach new behaviors to objects by placing these objects inside special wrapper objects that contain the behaviors.\
 ![img.png](img.png)
@@ -28,3 +30,11 @@ Proxy
 
 References for Code:
 * https://github.com/geekific-official/geekific-youtube/tree/main/design-patterns
+
+## Flyweight Design Pattern
+To reduce memory usage by reusing existing shared objects instead of creating new ones each time — especially when there are many similar objects.\
+Split the object’s data into two types:
+- Intrinsic State (shared) — data that is common and can be reused.
+- Extrinsic State (unique) — data that varies for each object and is passed from outside when needed.
+## Adapter Design Pattern
+![img_3.png](img_3.png)

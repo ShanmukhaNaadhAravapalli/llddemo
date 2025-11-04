@@ -25,8 +25,9 @@ Example of implementing chatbot
 * Loose coupling: Users don’t need to know each other.
 * Centralized control: Easy to enforce rules (e.g., block spam).
 * Extensible: Add new users or rules without changing existing classes.
+* Mediator manages communication between many peers (colleagues).
 ## 🔹 Template Method
-Template Method is a behavioral design pattern that defines the skeleton of an algorithm in the superclass but lets subclasses override specific steps of the algorithm without changing its structure.\
+Template Method is a behavioral design pattern that defines the skeleton of an algorithm in the superclass but lets subclasses override specific steps of the algorithm without changing the overall algorithm structure..\
 we will give what are all common in superclass and do not give implementations to those methods which may vary and lets subclasses decide it.\
 It promotes code reuse and enforces a common algorithm structure across multiple subclasses.
 https://medium.com/@mehar.chand.cloud/template-design-pattern-use-case-multiple-data-serialization-methods-76d2428423eb
@@ -34,7 +35,7 @@ https://medium.com/@mehar.chand.cloud/template-design-pattern-use-case-multiple-
 The Memento pattern allows you to save and restore the previous state of an object without revealing the details of its implementation. It acts like a "snapshot" that can be stored and used to revert an object to a previous state.\
 When It's Used: This pattern is very common in applications that require undo/redo functionality, such as text editors, graphic design software, or even a game where you can save and load your progress. It's also used in transaction management systems to roll back operations if an error occurs.\
 Why It's Widespread: The Memento pattern directly addresses a very common and important application feature—the ability to undo an action. Its simple, clean separation of roles (Originator, Memento, and Caretaker) makes it straightforward to implement and integrate into existing systems without breaking encapsulation.\
-Key Features of the Memento Design Pattern:/
-1.Originator: The Originator class represents the object whose state needs to be saved and restored. It creates and retrieves Mementos to capture and restore its state./
-2.Memento: The Memento class encapsulates the state of the Originator object. It provides methods for retrieving and setting the state, but it doesn’t expose its internal structure./
-3.Caretaker: The Caretaker class is responsible for storing and managing the Mementos. It requests Mementos from the Originator to save the state and provides Mementos back to the Originator for state restoration./
+Key Features of the Memento Design Pattern
+- 1.`Originator`: The Originator class represents the object whose state needs to be saved and restored. It creates and retrieves Mementos to capture and restore its state.\
+- 2.`Memento`: The Memento class encapsulates the state of the Originator object. It provides methods for retrieving and setting the state, but it doesn’t expose its internal structure.\
+- 3.`Caretake`r: The Caretaker class is responsible for storing and managing the Mementos. It requests Mementos from the Originator to save the state and provides Mementos back to the Originator for state restoration.

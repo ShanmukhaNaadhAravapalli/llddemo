@@ -77,4 +77,9 @@ public class Decorator {
         System.out.println("Cost: $" + pizza2.getCost());
     }
 }
+
+/* without decorator design pattern you have to create new class. example
+   class Coffee(base) 10, MilkCoffee(base + 2),  SugarCoffee(base + 3). we want MilkSugarCoffee. we need to create new class for it(base + 2+ 3)
+   instead we can use decorator here
+*/
 // https://github.com/geekific-official/geekific-youtube/tree/main/design-patterns/structural-decorator/src/main/java/com/youtube/geekific

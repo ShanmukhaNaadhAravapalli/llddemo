@@ -94,6 +94,67 @@ public class Adaptor {
     }
 }
 
+// Target
+// Client Interface (Your App expects this)
+interface IMultiRestoApp {
+    void displayMenus(String xmlData);
+}
+
+class MultiRestoApp implements IMultiRestoApp {
+    @Override
+    public void displayMenus(String xmlData) {
+        System.out.println("Displaying XML menus in MultiRestoApp: " + xmlData);
+    }
+}
+
+//Adaptee
+// This is the 3rd Party/Fancy UI Class (can't change it)
+class FancyUIService {
+    public void displayFancyMenus(String jsonData) {
+        System.out.println("Displaying FANCY Menus using JSON: " + jsonData);
+    }
+}
+
+
+//Adapter
+class FancyUIServiceAdapter implements IMultiRestoApp {
+    private FancyUIService fancyUIService;
+
+    public FancyUIServiceAdapter(FancyUIService fancyUIService) {
+        this.fancyUIService = fancyUIService;
+    }
+
+    @Override
+    public void displayMenus(String xmlData) {
+        // Convert XML to JSON (mocked for demo)
+        String jsonData = convertXmlToJson(xmlData);
+        fancyUIService.displayFancyMenus(jsonData);
+    }
+
+    private String convertXmlToJson(String xmlData) {
+        // Stub conversion; in real case, use a library
+        return "{json: 'converted from xml'}";
+    }
+}
+
+class AdapterPatternDemo {
+    public static void main(String[] args) {
+        // Old way (XML, before adapter)
+        IMultiRestoApp simpleApp = new MultiRestoApp();
+        simpleApp.displayMenus("<menus><item>Pizza</item></menus>");
+
+        // New way (using Fancy UI that needs JSON, via Adapter)
+        FancyUIService fancyUI = new FancyUIService();
+        IMultiRestoApp fancyApp = new FancyUIServiceAdapter(fancyUI);
+        fancyApp.displayMenus("<menus><item>Burger</item></menus>");
+    }
+}
+
+
+
+
+
+
 /*
 Adapter design pattern is one of the structural design pattern
 it is used so that two unrelated interfaces can work together.
